@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">PersonalTrainerPortal2</string>
+
+    <string name="option_menu">Logoff</string>
+
+    <!--Strings related to main_portal -->
+    <string name="action_settings">Settings</string>
+    <string name="action_new_client">New Client</string>
+    <string name="action_payment">Payment</string>
+    <string name="action_list">Client List</string>
+    <string name="action_schedule">Schedule</string>
+
+    <!--strings related to client -->
+   <string name="client_action_save">Save</string>
+    <string name="client_name_hint">Name</string>
+    <string name="client_address_hint">Address</string>
+    <string name="client_phone_hint">Phone</string>
+
+    <!--strings related to client list -->
+    <string name="clist_tv">Client List</string>
+
+    <!--strings related to payment -->
+    <string name="pmt_tv">Payment Amount</string>
+    <string name="pmt_amt_hint">$00.00</string>
+    <string name="pmt_cardName_hint">Name on Card</string>
+    <string name="pmt_cardNumber_hint">Card Number</string>
+    <string name="pmt_exp_hint">Exp</string>
+    <string name="pmt_cvv_hint">CVV</string>
+    <string name="prompt_email">Email</string>
+
+    <!--strings related to Schedule -->
+    <string name="schedule_tv">Sessions Schedule</string>
+
+    <!-- Strings related to login -->
+    <string name="action_login">Login</string>
+    <string name="successful_login">Login Successful</string>
+    <string name="unsuccessful_login">Unsuccessful Login try again!</string>
+    <string name="user_name">Logged in:JDOE</string>
+    <string name="password">welcome1</string>
+    <string name="prompt_user">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="login_tv_sign_in">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="incorrect_password">This password is incorrect try again!</string>
+
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bignerdranch.android.personaltrainerportal2.MainPortalActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_below="@+id/fragment_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        />
+
+    <Button
+        android:id="@+id/btnNewClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoImage"
+        android:layout_marginLeft="51dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="68dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/action_new_client"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/logoImage"
+        android:layout_alignRight="@+id/logoImage"
+        android:layout_alignTop="@+id/btnNewClient"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/action_payment"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnClist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnNewClient"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnNewClient"
+        android:layout_marginBottom="31dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/action_list"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnClist"
+        android:layout_alignLeft="@+id/btnPayment"
+        android:layout_alignStart="@+id/btnPayment"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/action_schedule"
+        android:textSize="18sp"/>
+
+
+
+</RelativeLayout>
