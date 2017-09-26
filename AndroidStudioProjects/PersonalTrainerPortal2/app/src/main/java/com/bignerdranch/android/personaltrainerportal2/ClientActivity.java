@@ -1,63 +1,54 @@
 package com.bignerdranch.android.personaltrainerportal2;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class ClientActivity extends AppCompatActivity implements TextWatcher{
+public class ClientActivity extends AppCompatActivity {
     private static final String TAG = "ClientActivity";
 
-    EditText name;
-    EditText address;
-    EditText phone;
-    CheckBox cbA, cbI;
-
+    EditText NewName, NewAddress, NewPhone;
+    Button btnSave, btnViewList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client);
-        Log.d(TAG, "onCreate: Starting");
+
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
-        name = (EditText)findViewById(R.id.ETname);
-        name.addTextChangedListener(this);
-        address = (EditText)findViewById(R.id.ETaddress);
-        address.addTextChangedListener(this);
-        phone = (EditText)findViewById(R.id.ETphone);
-        phone.addTextChangedListener(this);
-
-        Button btnNavList = (Button) findViewById(R.id.btnSave);
-        btnNavList.setOnClickListener(new View.OnClickListener() {
+        NewName = (EditText) findViewById(R.id.etName);
+        NewAddress = (EditText) findViewById(R.id.etAddress);
+        NewPhone = (EditText) findViewById(R.id.etPhone);
+        btnSave = (Button) findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "onClick: btnNavList");
+                String cname = NewName.getText().toString();
+                String caddress = NewAddress.getText().toString();
+                String cphone = NewPhone.getText().toString();
 
-                Intent intent = new Intent(ClientActivity.this,ClientListActivity.class );
-                startActivity(intent);
+                ContactsTable contactsTable = new ContactsTable(getApplicationContext());
+                contactsTable.openDB();
+                contactsTable.insertRecord(cname,caddress,cphone);
+                Toast.makeText(getApplicationContext(),"Contact Saved",Toast.LENGTH_SHORT).show();
+                contactsTable.closeDB();
+
+                finish();
+
             }
         });
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
     }
 
-    @Override
-    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable editable) {
-
-    }
 }
+
+
+
+
+
+
+

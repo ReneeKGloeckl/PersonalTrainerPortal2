@@ -12,9 +12,11 @@
 
     <!--strings related to client -->
    <string name="client_action_save">Save</string>
+    <string name="client_action_view">View List</string>
     <string name="client_name_hint">Name</string>
     <string name="client_address_hint">Address</string>
     <string name="client_phone_hint">Phone</string>
+    <string name="client_email_hint">Email</string>
 
     <!--strings related to client list -->
     <string name="clist_tv">Client List</string>

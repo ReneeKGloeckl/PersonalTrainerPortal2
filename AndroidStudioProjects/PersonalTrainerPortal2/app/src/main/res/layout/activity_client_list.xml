@@ -7,20 +7,9 @@
     android:layout_height="match_parent"
     tools:context="com.bignerdranch.android.personaltrainerportal2.ClientListActivity">
 
-    <TextView
-        android:id="@+id/tvClist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clist_tv"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </ListView>
+        android:id="@+id/lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
